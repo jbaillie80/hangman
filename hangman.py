@@ -36,6 +36,7 @@ def generate_word_string(word, letters_guessed):
     """
 
     #output stores either the correct letters guessed or an _ in the order of the word
+    word = word.upper()
     output = []
     for letter in word:
         if(letter in letters_guessed):
@@ -49,7 +50,7 @@ if(__name__ == '__main__'):
 
     WORD = pick_random_word()
     
-    letters_to_guess = set(WORD)
+    letters_to_guess = set(WORD.upper())
     correct_letters_guessed = set()
     incorrect_letters_guessed = set()
     num_guesses = 0
